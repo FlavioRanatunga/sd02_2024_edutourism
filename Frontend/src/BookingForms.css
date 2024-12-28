@@ -1,0 +1,97 @@
+/* Main container for the pop-up form */
+.booking-form-wrapper {
+  z-index: 99999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease, visibility 1s ease;
+}
+
+/* Animation for the form to slide down */
+.booking-form-wrapper.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.booking-form {
+  z-index: 99999;
+  background-color: cadetblue;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  width: 60%;
+  position: relative;
+  transform: translateY(-50px); /* Initial state: move up by 50px */
+  opacity: 0; /* Hidden initially */
+  transition: transform 1s ease, opacity 1s ease; /* Animation with latency */
+}
+
+/* When active, the form slides down and becomes visible */
+.booking-form-wrapper.active .booking-form {
+  transform: translateY(0); /* Moves back to normal position */
+  opacity: 1; /* Becomes visible */
+}
+
+/* Close button */
+.book-close-button {
+  z-index: 99999;
+  position: absolute;
+  top: 1px;
+  right: 1px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* Form fields styling */
+.booking-form input[type="text"],
+.booking-form input[type="date"],
+.booking-form input[type="number"],
+.booking-form input[type="time"],
+.booking-form textarea {
+display:inline-table;
+  width: 36%;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+
+/* Submit button styling */
+.booking-form button[type="submit"] {
+  margin-top: 18%;
+  width: 10%;
+  padding: 10px;
+  background-color: red;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.booking-form button[type="submit"]:hover {
+  background-color: #ffffff;
+  color: red;
+}
+
+.book-wrapper{
+  display: block;
+  width: 100%;
+}

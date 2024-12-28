@@ -1,0 +1,46 @@
+
+/*-------------------------------------       
+        9.  Counter
+--------------------------------------*/
+.statistics{
+  position:relative;
+  display: flex;
+  width: 100%;
+  margin-top: 20px;
+  align-items: center;
+  background:url(../public/banners/counter-banner.jpg)no-repeat fixed;
+  background-position:center;
+  background-size:cover;
+  padding:127px 0 120px;
+}
+.statistics:before{
+  position:absolute;
+  content:'';
+  background: rgba(75,75,75,.60);
+  height:100%;
+  width:100%;
+  top:0;
+  left:0;
+}
+/* single-ststistics-box */
+.single-ststistics-box {
+  text-align: center;
+  margin-bottom:30px;
+
+}
+/* single-ststistics-box */
+.statistics-content{
+  display: flex;
+  justify-content: center;
+  color:#fff;
+  font-size:60px;
+}
+.statistics-content span {
+  margin-left: 5px;
+}
+.single-ststistics-box h3{
+  color:#fff;
+  font-size:24px;
+  text-transform:capitalize;
+  font-weight: 500;
+}

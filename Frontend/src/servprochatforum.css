@@ -1,0 +1,115 @@
+/* Container for the chat room */
+.chat-container {
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    height: 80vh;
+    overflow-y: auto;
+}
+
+/* Chat room list */
+.chat-room {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Individual chat messages */
+.chat-message {
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Sender name styling */
+.message-sender {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #007bff;
+    text-align: left;
+    margin-left: 160px;
+}
+
+/* Message text styling */
+.message-text {
+    margin-bottom: 5px;
+    font-size: 1.1em;
+    color: #333;
+    text-align: left;
+    margin-left: 160px;
+}
+
+/* Reply info (the message being replied to) */
+.reply-info {
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 3px solid #007bff;
+    background-color: #f0f8ff;
+    border-radius: 5px;
+    font-size: 0.9em;
+    color: #555;
+    text-align: left;
+    max-width: 70%;
+    margin-left: 70px;
+}
+
+/* The sender of the original message in the reply */
+.reply-sender {
+    font-weight: bold;
+    color: #555;
+}
+
+/* The text of the original message */
+.reply-text {
+    display: block;
+    margin-top: 5px;
+    color: #555;
+    margin-left: 78px;
+}
+
+/* Reply button styling */
+.reply-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 0.9em;
+    position: absolute;
+    /* Position relative to the nearest positioned ancestor */
+    right: 10px;
+    /* Distance from the right edge of the container */
+    bottom: 10px;
+}
+
+.reply-button:hover {
+    background-color: #0056b3;
+}
+
+/* Hover effect for the whole message */
+.chat-message:hover {
+    background-color: #f9f9f9;
+}
+
+/* Scrollbar for the chat-container */
+.chat-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 10px;
+}
+
+.chat-container::-webkit-scrollbar-track {
+    background-color: #f8f9fa;
+}

@@ -1,0 +1,100 @@
+/* Container for the entire component */
+.chat-container {
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Tabs for selecting topics */
+.MuiTabs-root {
+  margin-bottom: 20px;
+}
+
+.MuiTab-root {
+  font-weight: bold;
+}
+
+/* Chat messages and replies styling */
+.chat-room {
+  list-style-type: none;
+  padding: 0;
+}
+
+.chat-message {
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Reply styling */
+.reply-message {
+  background-color: #f0f0f0; /* Light grey background for replies */
+  border-left: 4px solid #0078d4; /* Blue left border */
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+}
+
+.reply-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.reply-author {
+  font-weight: bold;
+  color: #333;
+  margin-right: 10px;
+}
+
+.reply-date {
+  font-size: 0.9em;
+  color: #888;
+}
+
+.original-message {
+  background-color: #ffffff; /* White background for the original message */
+  border: 1px solid #e0e0e0; /* Light border around the original message */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.original-message-text {
+  font-size: 0.9em;
+  color: #333;
+}
+
+/* Chat message styling */
+.message-sender {
+  font-weight: bold;
+}
+
+.message-text {
+  margin-top: 5px;
+}
+
+/* Reply button styling */
+.reply-button {
+  margin-top: 10px;
+}
+
+/* Reply form styling */
+.reply-form {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.reply-form textarea {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.send-button {
+  margin-top: 10px;
+}

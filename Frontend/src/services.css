@@ -1,0 +1,395 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+/* Card Element Styling */
+.cardElement {
+  width: 35%;
+  transition: all 0.6s ease;
+  border: 1px solid #b4b4b4 !important;
+  border-radius: 12px !important;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px;
+}
+
+.cardElement:hover {
+  margin-top: 4px;
+  border-color: white !important;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.cardElement .bookBut {
+  background-color: green;
+  color: white;
+  border: 2px white solid;
+  border-radius: 10px;
+  width: 27%; /* Increased the width by 50% */
+  padding: 15px 30px; /* Increased the padding to make it larger */
+  transition: all 0.3s ease;
+  font-size: 1.2rem; /* Make the font size larger */
+}
+
+.cardElement .bookBut:hover {
+  background-color: white;
+  color: green;
+  border: 2px green solid;
+}
+
+.cardElement img{
+  width: 100% !important;
+  height: 200px !important;
+
+}
+
+
+/* Modal Styling */
+.ServiceModal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Make the modal take the full width of the screen */
+  background: white;
+  padding: 20px;
+  border-radius: 7px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  animation: fadeIn 0.9s;
+}
+
+.ServiceModal-content {
+  text-align: center;
+}
+
+/* Fade In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* Close Button */
+.close-button {
+  position: fixed;
+  
+  right: 1%;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px; /* Increased the padding to make it larger */
+  cursor: pointer;
+  font-size: 1.2rem; /* Increased font size */
+  font-weight: bold;
+}
+
+.close-button:hover {
+  background-color: darkred;
+}
+
+/* Search Bar */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-bar input {
+  width: 200px;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Filter Form */
+.filter-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.filter-form input {
+  width: 200px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Courses List */
+.courses-list {
+  max-height:1000px;
+   overflow-y:scroll;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Course Card */
+.course-card {
+  position: relative;
+  border: 1px solid #ddd;
+  border-radius: 10px !important;
+  padding: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background-color: white;
+}
+
+.course-card:hover {
+  margin-top: 4px;
+  border-radius: 12px;
+  border-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.course-card h3 {
+  margin-top: 0;
+}
+
+.course-card p {
+  margin: 5px 0;
+}
+
+.course-card img {
+  width: 100% !important;
+  height: 210px !important;
+  border-radius: 8px; 
+  max-height: 200px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+
+
+/* Modal Styling */
+.course-details-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%; /* Full-width modal */
+  max-width: 90%; /* Maximum width restriction for large screens */
+  height: 75%;
+  background: white;
+  padding: 20px;
+  border-radius: 9px;
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+  z-index: 9999;
+  animation: fadeIn 0.9s;
+}
+
+.course-details-middle {
+  max-height: 400px; /* Match the height with the other sections */
+  overflow-y: auto; /* Add vertical scroll if content exceeds max-height */
+  box-sizing: border-box;
+}
+
+.course-tittle {
+  font-size: 2rem; /* Make the title larger */
+  text-align: center; /* Center the title horizontally */
+  margin-bottom: 20px; /* Add some space below the title */
+  width: 100%; /* Ensure the title takes up the full width */
+  font-weight: bold; /* Make the title bold */
+  color: #333; /* Set a dark color for the title */
+}
+
+/* Close Button */
+.close-button-small {
+  position: absolute;
+  top: 1%;
+  right: 1%;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 0px 12px;
+    cursor: pointer;
+    font-size: 4.2rem;
+  font-weight: bold;
+}
+
+
+.close-button-small:hover {
+  background-color: darkred;
+}
+
+.course-details.fade-in {
+  opacity: 1;
+  transform: scale(1);
+  display: block;
+}
+
+.course-details-content {
+  display: flex;
+  gap: 20px;
+  width: 100%; /* Ensure the content takes up full width */
+}
+.course-details-image {
+  width:80%;
+  max-height:80% ;
+ /* Ensure image takes up the full width of the left section */
+  object-fit: cover;
+  border-radius: 5px;
+} 
+
+.course-details-right {
+  display: flex;
+  max-height: 450px;
+  flex-direction: column;
+  align-items: flex-end; /* Align items to the right */
+  justify-content: space-between;
+  padding-right: 10px; /* Optional: Adjust for any additional padding needed */
+}
+
+.course-details-text {
+  flex: 1;
+}
+
+.course-details p {
+  margin: 5px 0;
+}
+
+.course-details-right .book-button {
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 30px; /* Larger button */
+  font-size: 1.2rem; /* Larger font size */
+}
+
+.course-details-right .book-button:hover {
+  background-color: darkgreen;
+}
+
+.course-details-left, .course-details-middle, .course-details-right {
+  width: 33.33%; /* Each section takes up one-third of the width */
+  box-sizing: border-box; /* Include padding/border in the element's width/height */
+  overflow-y: auto; /* Allow vertical scrolling if content exceeds height */
+  padding: 10px;
+}
+
+/* Hide courses list when a course is selected */
+.hidden {
+  display: none;
+}
+
+/* Fade In/Out Effects */
+.fade-in {
+  opacity: 1 !important;
+  transform: scale(1) !important;
+}
+
+.fade-out {
+  opacity: 0 !important;
+  transform: scale(0.95) !important;
+}
+
+.card-test-container {
+  position: relative;
+}
+.course-hover-details {
+  position: absolute;
+  bottom: 1%;
+  transform: translate(50%, 50%) !important;
+  
+  right:1%;
+  opacity: 0;
+  animation: hover-details-appear 0.5s forwards;
+  backdrop-filter: blur(5px);
+  background-color: rgba(255, 255, 255, 0.629);
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 10000000 !important;
+  width: 100%;
+  height: 50%;
+}
+
+@keyframes hover-details-appear {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+.course-card {
+  position: relative;
+  overflow: visible; /* Ensure the hover details are visible outside the card */
+}
+
+
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px; /* Small padding */
+  height: auto; /* Adjust height */
+}
+
+/* Styling for the icon */
+.arrow-icon {
+  font-size: 2rem; /* Smaller size */
+  color: gray;
+  opacity: 0.6; /* Slightly transparent */
+}
+
+#payButton{
+  border: 2px solid #2e7d32;
+  padding:1%;
+  border-radius: 5px;
+  background-color: #2e7d32;
+  color: #ffffff;
+}
+
+#payButton:hover {
+ 
+  background-color: #ffffff;
+  color: #2e7d32;
+}
+
+.course-details-left-bottom {
+  padding-left: 10%;
+ 
+  text-align: left;
+  max-height:19% ; /* Match the height with the other sections */
+  overflow-y: auto; /* Add vertical scroll if content exceeds max-height */
+  box-sizing: border-box;
+}
+
+.customize-map-button {
+  background-color: #4caf50; /* Green color */
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px; /* Add some spacing from the elements above */
+}
+
+.customize-map-button:hover {
+  background-color: #45a049; /* Darker green on hover */
+}
+
+.customize-map-button:active {
+  background-color: #3e8e41; /* Even darker green when clicked */
+  transform: scale(0.98); /* Slightly scale the button down on click */
+}
+
+.customize-map-button:focus {
+  outline: none; /* Remove the outline when the button is focused */
+}

@@ -1,0 +1,111 @@
+/* Settings Modal */
+.settingsForm {
+  display: flex;
+  position: fixed;
+  z-index: 10000;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Darker overlay for better contrast */
+  justify-content: center;
+  align-items: center;
+}
+
+.settingsFormContent {
+  background-color: white;
+  padding: 10px 40px; /* Increased padding for better spacing */
+  border-radius: 15px; /* Rounded corners for a modern look */
+  width: 90%;
+  max-width: 600px; /* Maximum width for larger screens */
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  text-align: left; /* Align text to the left for readability */
+  position: relative; /* For positioning close button */
+}
+
+.settingsFormContent h2 {
+  margin-bottom: 20px; /* Spacing below header */
+  font-size: 24px;
+  color: #333; /* Darker color for better readability */
+  text-align: center;
+}
+
+.settingsFormContent label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.settingsFormContent input, .settingsFormContent textarea {
+  width: 100%; /* Full width for inputs */
+  height: 40px;
+  padding: 12px; /* Increased padding for better usability */
+  border: 1px solid #ddd;
+  border-radius: 8px; /* Rounded corners for inputs */
+  margin-bottom: 15px; /* Spacing between fields */
+  font-size: 16px;
+}
+
+.settingsFormContent button {
+  background-color: red; /* Blue button for primary actions */
+  color: white;
+  float:right;
+  border: none;
+  display: inline;
+  border-radius: 8px;
+  padding: 12px;
+  margin-top: 25px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 200px;
+  transition: background-color 1s ease;
+}
+
+.settingsFormContent button:hover {
+  background-color: white; /* Blue button for primary actions */
+  color: red;
+}
+
+.close-button {
+  position: absolute;
+  top: 15px;
+  right: -28px;
+  font-size: 24px;
+  cursor: pointer;
+  color: #888; /* Lighter color for close button */
+}
+
+.close-button:hover {
+  color: #333; 
+  /* Darker color on hover */
+}
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+  .settingsFormContent {
+    width: 95%;
+    padding: 20px;
+  }
+}
+
+.Slide-enter {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 800ms ease, transform 800ms ease;
+  transition-delay: 1500ms; /* Add delay for enter */
+}
+
+.Slide-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.Slide-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.Slide-exit-active {
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 800ms ease, transform 800ms ease;
+  transition-delay: 1500ms; /* Add delay for exit */
+}

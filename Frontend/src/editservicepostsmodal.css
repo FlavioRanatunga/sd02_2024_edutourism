@@ -1,0 +1,122 @@
+/* Settings Modal */
+.editPostsForm {
+    display: flex;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Darker overlay for better contrast */
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.editPostsFormContent {
+    background-color: white;
+    margin: 50px auto;
+
+    padding: 20px;
+    /* Increased padding for better spacing */
+    border-radius: 15px;
+    /* Rounded corners for a modern look */
+    width: 50%;
+    /* Maximum width for larger screens */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    /* Align text to the left for readability */
+    /* For positioning close button */
+}
+
+
+.editPostsFormContent h2 {
+    margin-bottom: 20px;
+    /* Spacing below header */
+    font-size: 24px;
+    color: #333;
+    /* Darker color for better readability */
+    text-align: center;
+}
+
+.editPostsFormContent label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+.loginForm input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+
+/* Add responsiveness */
+@media (max-width: 768px) {
+    .editPostsFormContent {
+        width: 95%;
+        padding: 20px;
+    }
+}
+
+.Slide-enter {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 800ms ease, transform 800ms ease;
+    transition-delay: 1500ms;
+    /* Add delay for enter */
+}
+
+.Slide-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Slide-exit {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.Slide-exit-active {
+    opacity: 0;
+    transform: translateY(-50px);
+    transition: opacity 800ms ease, transform 800ms ease;
+    transition-delay: 1500ms;
+    /* Add delay for exit */
+}
+
+.editPostsFormContent button {
+    background-color: red;
+    /* Blue button for primary actions */
+    color: white;
+    float: right;
+    border: none;
+    display: inline;
+    border-radius: 8px;
+    padding: 5px;
+    margin-top: 25px;
+    cursor: pointer;
+    font-size: 12px;
+    width: 400px;
+    transition: background-color 1s ease;
+}
+
+.editPostsFormContent button:hover {
+    background-color: white;
+    /* Blue button for primary actions */
+    color: red;
+}
+
+.close-button {
+    position: relative;
+    float: right;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    /* Lighter color for close button */
+}
+
+.close-button:hover {
+    color: #333;
+    /* Darker color on hover */
+}
